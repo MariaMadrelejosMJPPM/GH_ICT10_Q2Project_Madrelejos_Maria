@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <title>Periodic Table Information Finder</title>
+    <style>
+        nav.navbar {
+            background-color: #bf7d88;
+            padding-left: 30px;
+            padding-right: 30px;
+            width: 100%;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f8f3f5;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container{
+            background: rgba(243, 217, 217, 0.6);
+            padding: 30px;
+            width: 430px;
+            border: 2px solid #b99494;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1{
+            color: #6b3f46;
+            margin-bottom: 10px;
+        }
+
+        h2, h3, h4{
+            color: #5f5555;
+            font-size: 15px;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        input[type="text"]{
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #c9a8a8;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: Cambria, serif;
+        }
+
+        input[type="text"]:focus{
+            outline: none;
+            border-color: #8d6a6a;
+        }
+
+        input[type="button"]{
+            background: #b97b7b;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: Cambria, serif;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse show" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">meet the creator</a>
+                </li>
+                <li class="nav-item">
+                    <a href="element_checker.html" class="nav-link">element checker</a>
+                </li>
+                <li class="nav-item">
+                    <a href="member_checker.html" class="nav-link">verification system</a>
+                </li>
+                <li class="nav-item">
+                    <a href="club_members.html" class="nav-link">club member management</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <br><br><br><br><div style="background-color: rgb(243, 217, 217, 0.4); padding: 30px 20px; border-radius: 15px; border-color: #b99494; border-style: solid; color: rgb(33, 0, 6); width: 700px; box-shadow: -1px 1px 17px 1px #daece7; font-size: 15px;">
+    <h1>non-metal elements</h1>
+    <h2>periodic table information finder</h2>
+    <h4>please enter a non-metal element symbol</h4>
+    <form onsubmit="return false;">
+        <input type="text" id="symbol_input" placeholder="enter symbol (e.g. H, O, Rn)"> 
+        <input type="button" py-click="search_element" value="search">
+    </form><br>
+    <div style="background-color: white; border-radius: 15px; padding: 15px;" id="result"></div>
+    </div>
+
+    <py-script src="elements.py"></py-script>
+</body>
+</html>
